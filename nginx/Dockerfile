@@ -11,3 +11,5 @@ RUN curl -sfL \
 	install /dev/stdin /usr/local/bin/dockerize
 
 EXPOSE 80
+
+CMD [ "nginx", "-g", "daemon off;" ]

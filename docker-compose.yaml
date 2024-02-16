@@ -21,7 +21,8 @@ services:
     build:
       context: ./node  
     volumes:      
-      - ./node:/usr/src/app
+     - ./node:/usr/src/app
+     - /usr/src/app/node_modules
     ports:
       - "3000:3000"
     networks:
