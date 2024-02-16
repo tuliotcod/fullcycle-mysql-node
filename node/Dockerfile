@@ -9,6 +9,9 @@ COPY . .
 USER root
 
 RUN apk add --no-cache curl
+RUN apk update && apk add nodejs
+
+RUN npm install
 
 ENV DOCKERIZE_VERSION v0.19.0
 RUN curl -sfL \
@@ -16,5 +19,3 @@ RUN curl -sfL \
 	install /dev/stdin /usr/local/bin/dockerize
 
 EXPOSE 3000
-
-USER node
